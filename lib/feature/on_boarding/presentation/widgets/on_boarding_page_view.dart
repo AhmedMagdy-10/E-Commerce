@@ -13,6 +13,7 @@ class OnBoardingPageView extends StatelessWidget {
           backgroundImage: 'assets/images/background_shape1.svg',
 
           image: 'assets/images/fruit_basket1.svg',
+
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

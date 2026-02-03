@@ -16,18 +16,22 @@ class PageViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Stack(
-          children: [
-            SvgPicture.asset(backgroundImage, fit: BoxFit.cover),
+        SizedBox(
+          width: double.infinity,
+          height: MediaQuery.of(context).size.height * 0.5,
+          child: Stack(
+            children: [
+              SvgPicture.asset(backgroundImage, fit: BoxFit.cover),
 
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: SvgPicture.asset(image),
-            ),
-            Padding(padding: const EdgeInsets.all(16), child: Text('تخطي')),
-          ],
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: SvgPicture.asset(image),
+              ),
+              Padding(padding: const EdgeInsets.all(16), child: Text('تخطي')),
+            ],
+          ),
         ),
         SizedBox(height: 65),
         title,

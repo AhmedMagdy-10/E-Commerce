@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_hup/core/utils/app_colors.dart';
+import 'package:fruits_hup/core/widgets/custom_button.dart';
 import 'package:fruits_hup/feature/on_boarding/presentation/widgets/on_boarding_page_view.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
@@ -18,8 +19,13 @@ class OnBoardingViewBody extends StatelessWidget {
             color: Color(0xff5DB957),
           ),
         ),
+        SizedBox(height: 29),
 
-        Container(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: CustomButton(onPressed: () {}, data: 'ابدأ الان'),
+        ),
+        SizedBox(height: 43),
       ],
     );
   }
