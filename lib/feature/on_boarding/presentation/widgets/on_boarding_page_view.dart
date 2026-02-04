@@ -3,13 +3,17 @@ import 'package:fruits_hup/core/utils/app_colors.dart';
 import 'package:fruits_hup/feature/on_boarding/presentation/widgets/page_view_item.dart';
 
 class OnBoardingPageView extends StatelessWidget {
-  const OnBoardingPageView({super.key});
-
+  const OnBoardingPageView({super.key, required this.pageController});
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: pageController,
       children: [
         PageViewItem(
+          isVisible:
+              (pageController.hasClients ? pageController.page!.round() : 0) ==
+              0,
           backgroundImage: 'assets/images/background_shape1.svg',
 
           image: 'assets/images/fruit_basket1.svg',
@@ -55,6 +59,10 @@ class OnBoardingPageView extends StatelessWidget {
               'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
         ),
         PageViewItem(
+          isVisible:
+              (pageController.hasClients ? pageController.page!.round() : 0) !=
+              0,
+
           backgroundImage: 'assets/images/background_shape2.svg',
           image: 'assets/images/fruit_basket2.svg',
           title: Text(
