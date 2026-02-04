@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hup/core/utils/app_colors.dart';
+import 'package:fruits_hup/core/utils/app_text_styles.dart';
 import 'package:fruits_hup/feature/on_boarding/presentation/widgets/page_view_item.dart';
 
 class OnBoardingPageView extends StatelessWidget {
@@ -23,33 +24,19 @@ class OnBoardingPageView extends StatelessWidget {
             children: [
               Text(
                 'مرحبًا بك في',
-                style: TextStyle(
-                  color: Color(0xFF0C0D0D),
-                  fontFamily: 'Cairo',
-                  height: 0,
-                  fontSize: 23,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyles.bold23.copyWith(color: Color(0xFF0C0D0D)),
               ),
 
               Text(
-                'HUB',
-                style: TextStyle(
+                ' HUB',
+                style: TextStyles.bold23.copyWith(
                   color: AppColors.seconderyColor,
-                  fontFamily: 'Cairo',
-                  height: 0,
-                  fontSize: 23,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
                 'Fruit',
-                style: TextStyle(
+                style: TextStyles.bold23.copyWith(
                   color: AppColors.primaryColor,
-                  fontFamily: 'Cairo',
-                  height: 0,
-                  fontSize: 23,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],
@@ -67,13 +54,7 @@ class OnBoardingPageView extends StatelessWidget {
           image: 'assets/images/fruit_basket2.svg',
           title: Text(
             'ابحث وتسوق',
-            style: TextStyle(
-              color: Color(0xFF0C0D0D),
-              fontFamily: 'Cairo',
-              height: 0,
-              fontSize: 23,
-              fontWeight: FontWeight.w700,
-            ),
+            style: TextStyles.bold23.copyWith(color: Color(0xFF0C0D0D)),
 
             textAlign: TextAlign.center,
           ),

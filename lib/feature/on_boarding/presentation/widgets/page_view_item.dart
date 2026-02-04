@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruits_hup/core/utils/app_text_styles.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem({
@@ -35,7 +36,12 @@ class PageViewItem extends StatelessWidget {
                 visible: isVisible,
                 child: Padding(
                   padding: const EdgeInsets.all(16),
-                  child: Text('تخطي'),
+                  child: Text(
+                    'تخطي',
+                    style: TextStyles.regular13.copyWith(
+                      color: Color(0xff949D9E),
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -49,13 +55,7 @@ class PageViewItem extends StatelessWidget {
           child: Text(
             subTitle,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Color(0xFF4E5556),
-              fontFamily: 'Cairo',
-              height: 0,
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-            ),
+            style: TextStyles.semiBold13.copyWith(color: Color(0xFF4E5556)),
           ),
         ),
       ],
