@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruits_hup/core/helper/functions/on_generate_function.dart';
+import 'package:fruits_hup/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_hup/feature/splash/presentation/view/splash_view.dart';
 import 'package:fruits_hup/generated/l10n.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPreferencesSingleton.inti();
   runApp(const FruitHub());
 }
 
