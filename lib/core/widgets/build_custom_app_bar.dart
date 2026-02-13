@@ -10,7 +10,10 @@ AppBar buildAppBar(BuildContext context, String title) {
       onPressed: () {
         Navigator.pop(context);
       },
-      icon: Icon(Icons.arrow_back_ios_new),
+      icon: CircleAvatar(
+        backgroundColor: Color(0xFFF1F1F5),
+        child: Icon(Icons.arrow_back_ios_new, size: 20),
+      ),
     ),
   );
 }
