@@ -12,6 +12,11 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController nameController = TextEditingController();
+    final TextEditingController emailController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
+    final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.only(top: 24, right: 16, left: 16),
@@ -19,11 +24,13 @@ class LoginViewBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             CustomTextFormField(
+              controller: emailController,
               hintText: 'البريد الإلكتروني',
               textInputType: TextInputType.emailAddress,
             ),
             SizedBox(height: 16),
             CustomTextFormField(
+              controller: passwordController,
               hintText: 'كلمة المرور',
               suffixIcon: Icon(Icons.remove_red_eye, color: Color(0xFFC9CECF)),
               textInputType: TextInputType.visiblePassword,
